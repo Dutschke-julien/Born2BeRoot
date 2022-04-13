@@ -50,7 +50,7 @@ MAC=$(ip a | grep "link/ether" | awk '{printf $2}')
 
 # Affiche le nombre de commande executer grace a sudo
 
-SUDO=$(cat /var/log/auth.log | grep "sudo" | wc -l)
+SUDO=$(cat /var/log/auth.log | grep -a "sudo" | wc -l)
 
 #Mise en forme du script
 wall "
