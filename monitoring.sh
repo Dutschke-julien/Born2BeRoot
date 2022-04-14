@@ -2,12 +2,12 @@
 
 # Liste des couleurs
 
-RED='\e[1;31m%s\e[0m\n'
-GREEN='\e[1;32m%s\e[0m\n'
-YELLOW='\e[1;33m%s\e[0m\n'
-BLUE='\e[1;34m%s\e[0m\n'
-MAGENTA='\e[1;35m%s\e[0m\n'
-CYAN='\e[1;36m%s\e[0m\n'
+RED='\e[1;31m%s\e[0m'
+GREEN='\e[1;32m%s\e[0m'
+YELLOW='\e[1;33m%s\e[0m'
+BLUE='\e[1;34m%s\e[0m'
+MAGENTA='\e[1;35m%s\e[0m'
+CYAN='\e[1;36m%s\e[0m'
 
 # Affichage de l'architecture du systeme d'exloitation et sa version kernel
 
