@@ -11,7 +11,7 @@ CYAN='\e[1;36m%s\e[0m\n'
 
 # Affichage de l'architecture du systeme d'exloitation et sa version kernel
 
-ARCHITECTURE1=$( uname -a )
+ARCHITECTURE=$( uname -a )
 
 # Affichage du nombre de processeurs physiques & virtuels
 
@@ -61,7 +61,7 @@ SUDO=$(cat /var/log/auth.log | grep -a "sudo" | wc -l)
 
 #Mise en forme du script
 wall "
-#Architecture: ${ARCHITECTURE1} ${ARCHITECTURE2} ${ARCHITECTURE3}
+#Architecture: ${ARCHITECTURE}
 #CPU physical: ${PROCESSORPHY}
 #vCPU:  ${PROCESSORVIR}
 #Memory Usage: ${MEMORY_USAGE1}/${MEMORY_USAGE2}MB (${MEMORY_USAGE3}%)
