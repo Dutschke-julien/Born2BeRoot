@@ -2,13 +2,11 @@
 
 # Affichage de l'architecture du systeme d'exloitation et sa version kernel
 
-ARCHITECTURE1=$(hostnamectl  | grep "Operating System" | cut -d " " -f5-)
-ARCHITECTURE2=$(cat /proc/cpuinfo | grep  "^model name" | cut -d " " -f3-)
-ARCHITECTURE3=$(arch)
+ARCHITECTURE1=$( uname -a )
 
 # Affichage du nombre de processeurs physiques & virtuels
 
-PROCESSORPHY=$(cat /proc/cpuinfo | grep "processor" | wc -l)
+PROCESSORPHY=$(nproc)
 PROCESSORVIR=$(cat /proc/cpuinfo | grep "processor" | wc -l)
 
 # Affichage de la memoire vive disponible sur le serveur et son taux d'utilisation en %
