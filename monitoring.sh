@@ -66,11 +66,11 @@ wall "
 `printf "$BLUE" "#vCPU: "`  `printf "$CYAN" ${PROCESSORVIR}`
 `printf "$GREEN" "#Memory Usage:"` `printf "$MAGENTA" ${MEMORY_USAGE1}/${MEMORY_USAGE2}MB`(${MEMORY_USAGE3}%)
 `printf "$GREEN" "#Disk Usage:"` `printf "$MAGENTA" ${DISK1}/${DISK2}Gb (${DISK3})`
-#CPU load: ${CPU}%
-#Last boot : ${LAST_REBOOT}
-#LVM use:  ${LVM}
-#Connection TCP: ${TCP} HAS BEEN ESTABLISHED
-#User log:  ${ULOG} Users
-#Network: IP: ${IPV4} MAC: ${MAC}
-#sudo: ${SUDO} uses
+`printf "#CPU load:"` `printf "$MAGENTA" ${CPU}%`
+`printf "$YELLOW" "#Last boot :" ${LAST_REBOOT}`
+`printf "$RED" "#LVM use:"` ${LVM}
+`printf "$RED" "#Connection TCP:"` ${TCP} `printf "$RED" "HAS BEEN ESTABLISHED"`
+`printf "$GREEN" "#User log:"`  ${ULOG} Users
+`printf "$GREEN" "#Network: IP:"` ${IPV4} `printf "GREEN" "MAC: "` ${MAC}
+`printf "$GREEN" "#sudo:"` ${SUDO} `printf "$GREEN" "uses"`
 "
