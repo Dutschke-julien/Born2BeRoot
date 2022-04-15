@@ -65,6 +65,7 @@ wall "
 `printf "$BLUE" "#CPU physical:"` `printf "$CYAN" ${PROCESSORPHY}`
 `printf "$BLUE" "#vCPU: "`  `printf "$CYAN" ${PROCESSORVIR}`
 `printf "$GREEN" "#Memory Usage:"` `printf "$MAGENTA" ${MEMORY_USAGE1}/${MEMORY_USAGE2}MB`(${MEMORY_USAGE3}%)
+`printf "$GREEN" "#Disk Usage:"` `printf "$MAGENTA" ${DISK1}/${DISK2}Gb (${DISK3})`
 #CPU load: ${CPU}%
 #Last boot : ${LAST_REBOOT}
 #LVM use:  ${LVM}
