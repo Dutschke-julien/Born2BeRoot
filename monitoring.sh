@@ -61,11 +61,10 @@ SUDO=$(cat /var/log/auth.log | grep -a "sudo" | wc -l)
 
 #Mise en forme du script
 wall "
-`printf "$GREEN" "#Architecture:"` ${ARCHITECTURE}
+`printf "$GREEN" "#Architecture:"` `printf "$YELLOW" ${ARCHITECTURE}`
 `printf "$BLUE" "#CPU physical:"` `printf "$CYAN" ${PROCESSORPHY}`
-#vCPU:  ${PROCESSORVIR}
-#Memory Usage: ${MEMORY_USAGE1}/${MEMORY_USAGE2}MB (${MEMORY_USAGE3}%)
-#Disk Usage: ${DISK1}/${DISK2}Gb (${DISK3})
+`printf "$BLUE" "#vCPU: "`  `printf "$CYAN" ${PROCESSORVIR}`
+`printf "$GREEN" "#Memory Usage:"` `printf "$MAGENTA" ${MEMORY_USAGE1}/${MEMORY_USAGE2}MB`(${MEMORY_USAGE3}%)
 #CPU load: ${CPU}%
 #Last boot : ${LAST_REBOOT}
 #LVM use:  ${LVM}
