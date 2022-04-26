@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # Liste des couleurs
 
@@ -60,17 +60,18 @@ MAC=$(ip a | grep "link/ether" | awk '{printf $2}')
 SUDO=$(cat /var/log/auth.log | grep -a "sudo" | wc -l)
 
 #Mise en forme du script
+
 wall "
 `printf "$GREEN" "#Architecture:"` `printf "$YELLOW" ${ARCHITECTURE}`
 `printf "$BLUE" "#CPU physical:"` `printf "$CYAN" ${PROCESSORPHY}`
 `printf "$BLUE" "#vCPU: "`  `printf "$CYAN" ${PROCESSORVIR}`
-`printf "$GREEN" "#Memory Usage:"` `printf "$MAGENTA" ${MEMORY_USAGE1}/${MEMORY_USAGE2}MB`(${MEMORY_USAGE3}%)
+`printf "$GREEN" "#Memory Usage:"` `printf "$MAGENTA" ${MEMORY_USAGE1} / ${MEMORY_USAGE2} " " MB "( " ${MEMORY_USAGE3} " % )"`
 `printf "$GREEN" "#Disk Usage:"` `printf "$MAGENTA" ${DISK1}/${DISK2}Gb (${DISK3})`
-`printf "#CPU load:"` `printf "$MAGENTA" ${CPU}%`
+`printf "$GREEN" "#CPU load:"` `printf "$MAGENTA" ${CPU}%`
 `printf "$YELLOW" "#Last boot :" ${LAST_REBOOT}`
-`printf "$RED" "#LVM use:"` ${LVM}
-`printf "$RED" "#Connection TCP:"` ${TCP} `printf "$RED" "HAS BEEN ESTABLISHED"`
-`printf "$GREEN" "#User log:"`  ${ULOG} Users
-`printf "$GREEN" "#Network: IP:"` ${IPV4} `printf "GREEN" "MAC: "` ${MAC}
-`printf "$GREEN" "#sudo:"` ${SUDO} `printf "$GREEN" "uses"`
+`printf "$RED" "#LVM use:"` `printf "$CYAN" ${LVM}`
+`printf "$RED" "#Connection TCP:"` `printf "$CYAN" ${TCP} ` `printf "$RED" "HAS BEEN ESTABLISHED"`
+`printf "$GREEN" "#User log:"` `printf "$RED" ${ULOG} Users`
+`printf "$GREEN" "#Network:"` `printf "$YELLOW"  "IP: "${IPV4}   "  MAC: "  ${MAC}`
+`printf "$GREEN" "#sudo:"` `printf "$CYAN" ${SUDO}` `printf "$GREEN" "uses"`
 "
